@@ -9,7 +9,7 @@ const About = () => {
           <p className="mt-4 text-muted-foreground">
             Mel Bao is a Microenterprise Home Kitchen Operation (MEHKO) in Los Altos, California,
             lovingly run by <strong>Dennis Hou</strong> and <strong>Phoebe Chen</strong> — Mel’s parents.
-            We craft Asian-inspired buns and traditional steamed sticky rice with a focus on fresh, organic ingredients and authentic flavors.
+            We craft Asian-inspired, baby- and toddler-friendly buns with a focus on fresh, organic ingredients and authentic flavors.
           </p>
           <p className="mt-3 text-muted-foreground">
             Every batch is made by hand in our certified home kitchen, with warm hospitality at the heart of everything we do.

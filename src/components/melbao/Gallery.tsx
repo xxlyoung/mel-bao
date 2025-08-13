@@ -1,7 +1,7 @@
 import img1 from "@/assets/menu-sesame-bun.jpg";
 import img2 from "@/assets/menu-banana-bun.jpg";
 import img3 from "@/assets/menu-yam-bun.jpg";
-import img4 from "@/assets/menu-sticky-rice.jpg";
+
 import img5 from "@/assets/gallery-bamboo-steamer.jpg";
 import img6 from "@/assets/gallery-sesame-macro.jpg";
 
@@ -9,7 +9,7 @@ const images = [
   { src: img1, alt: "Sesame bun close-up with sesame seeds", caption: "Sesame Bun" },
   { src: img2, alt: "Banana bun with fluffy interior", caption: "Banana Bun" },
   { src: img3, alt: "Yam bun with light purple yam filling", caption: "Yam Bun" },
-  { src: img4, alt: "Steamed sticky rice with pork belly and mushrooms", caption: "Steamed Sticky Rice" },
+  
   { src: img5, alt: "Bamboo steamer filled with buns", caption: "Fresh from the steamer" },
   { src: img6, alt: "Macro sesame seeds on wooden board", caption: "Toasted sesame detail" },
 ];

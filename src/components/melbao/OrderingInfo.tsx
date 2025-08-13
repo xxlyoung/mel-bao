@@ -7,7 +7,7 @@ const OrderingInfo = () => {
         <div>
           <h2 className="font-display text-3xl md:text-4xl">Ordering & Hours</h2>
           <p className="mt-2 text-muted-foreground">
-            Fresh daily in limited quantities. Pickup in Los Altos; local delivery available with insulated packaging.
+            Fresh, baby- and toddler-friendly buns in limited quantities. Pickup in Los Altos; local delivery with insulated packaging.
           </p>
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
             <div className="rounded-lg border p-4">

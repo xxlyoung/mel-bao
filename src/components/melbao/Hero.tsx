@@ -18,7 +18,7 @@ const Hero = () => {
             Freshly Made, Lovingly Crafted – From Our Home Kitchen to Your Table
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground">
-            Handcrafted Asian-inspired buns and traditional steamed sticky rice.
+            Handcrafted, baby- and toddler-friendly buns with simple, organic ingredients.
             Made fresh daily by Dennis Hou and Phoebe Chen in a certified home kitchen in Los Altos, CA.
           </p>
           <div className="flex flex-wrap gap-3">

@@ -23,7 +23,7 @@ const Index = () => {
     "@type": "Bakery",
     name: "Mel Bao",
     description:
-      "Microenterprise Home Kitchen Operation in Los Altos crafting artisan buns and steamed sticky rice.",
+      "Microenterprise Home Kitchen Operation in Los Altos crafting baby- and toddler-friendly artisan buns.",
     areaServed: "Los Altos, CA",
     founders: [
       { "@type": "Person", name: "Dennis Hou" },
@@ -41,8 +41,8 @@ const Index = () => {
   return (
     <div>
       <Helmet>
-        <title>Mel Bao | Artisan Buns & Sticky Rice in Los Altos</title>
-        <meta name="description" content="Photo-first MEHKO bakery in Los Altos by Dennis Hou & Phoebe Chen — handcrafted buns and steamed sticky rice, made fresh daily." />
+        <title>Mel Bao | Baby-Friendly Artisan Buns in Los Altos</title>
+        <meta name="description" content="Photo-first MEHKO bakery in Los Altos by Dennis Hou & Phoebe Chen — baby- and toddler-friendly artisan buns made fresh daily." />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
       </Helmet>
