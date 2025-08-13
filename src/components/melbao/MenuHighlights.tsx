@@ -1,0 +1,77 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import sesame from "@/assets/menu-sesame-bun.jpg";
+import banana from "@/assets/menu-banana-bun.jpg";
+import yam from "@/assets/menu-yam-bun.jpg";
+import rice from "@/assets/menu-sticky-rice.jpg";
+
+const items = [
+  {
+    name: "Sesame Bun",
+    img: sesame,
+    ingredients: ["Organic wheat flour", "Organic whole milk", "Organic sesame powder", "Yeast"],
+  },
+  {
+    name: "Banana Bun",
+    img: banana,
+    ingredients: ["Organic wheat flour", "Organic whole milk", "Organic banana", "Yeast"],
+  },
+  {
+    name: "Yam Bun",
+    img: yam,
+    ingredients: ["Organic wheat flour", "Organic whole milk", "Organic yam", "Yeast"],
+  },
+  {
+    name: "Steamed Sticky Rice",
+    img: rice,
+    ingredients: [
+      "Sticky rice",
+      "Pork belly",
+      "Dried shiitake mushroom",
+      "Dried shrimp",
+      "Shallot",
+      "Cilantro",
+      "Ginger",
+      "Soy sauce",
+      "Rice wine",
+      "White pepper",
+      "Five-spice pepper",
+      "Salt",
+    ],
+  },
+];
+
+const MenuHighlights = () => {
+  return (
+    <section id="menu" className="container py-16 md:py-24">
+      <div className="max-w-3xl mb-10">
+        <h2 className="font-display text-3xl md:text-4xl">Menu Highlights</h2>
+        <p className="text-muted-foreground mt-2">
+          Freshly made daily in our certified home kitchen.
+        </p>
+        <p className="text-xs text-muted-foreground mt-3">
+          Compliance: Made in a Home Kitchen. Permitted by Santa Clara County Department of Environmental Health. Permit # TBD
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {items.map((item) => (
+          <Card key={item.name}>
+            <CardHeader>
+              <CardTitle className="font-display">{item.name}</CardTitle>
+            </CardHeader>
+            <CardContent className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+              <img src={item.img} alt={`${item.name} photo`} className="w-full h-44 sm:h-48 object-cover rounded-md" loading="lazy" />
+              <ul className="text-sm list-disc pl-5 text-muted-foreground">
+                {item.ingredients.map((ing) => (
+                  <li key={ing}>{ing}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default MenuHighlights;
