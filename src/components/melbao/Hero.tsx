@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return <section id="home" className="relative min-h-[80vh] w-full flex items-center">
-      <div className="absolute inset-0 w-full h-full grid grid-cols-2 gap-0">
-        <img src="/lovable-uploads/40cfe013-3c5d-4d9c-beaf-43d8e4fcfc02.png" alt="Mel Bao branded paper bag with blue label" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
-        <img src="/lovable-uploads/ba0ebf6c-e7d3-4e97-95f6-1c35a91ecf8f.png" alt="Mel Bao branded paper bag with orange label" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+      <div className="absolute top-0 right-0 w-1/2 h-full">
+        <img src="/lovable-uploads/471bacc7-5249-4498-868b-58fab331450b.png" alt="Mel Bao branded packaging bags" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
       </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background/90" />
       <div className="container relative py-32 md:py-40">
         <div className="max-w-2xl space-y-6 animate-enter">
