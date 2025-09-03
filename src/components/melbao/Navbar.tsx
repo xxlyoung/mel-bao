@@ -10,7 +10,7 @@ const Navbar = () => {
         </div>
         
         <div className="flex items-center">
-          <img src="/lovable-uploads/f2262b72-29a0-4801-9c3d-15455386edec.png" alt="Mel Bao Logo" className="h-12 w-auto" />
+          <img src="/lovable-uploads/f2262b72-29a0-4801-9c3d-15455386edec.png" alt="Mel Bao Logo" className="h-18 w-auto" />
         </div>
         
         <div className="hidden md:block">
