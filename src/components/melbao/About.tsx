@@ -25,7 +25,7 @@ const About = () => {
           </figure>
           <div className="grid grid-cols-2 gap-4">
             <figure className="overflow-hidden rounded-lg border">
-              <img src={packagingBag1} alt="Mel Bao branded paper bag with orange sticker" className="w-full h-32 object-cover" loading="lazy" />
+              <img src="/lovable-uploads/a7dd52f5-7f0e-4b98-b910-7313dd2c9b38.png" alt="Colorful Mel Bao logos displayed in vibrant pink, yellow, orange, and blue colors" className="w-full h-32 object-cover" loading="lazy" />
             </figure>
             <figure className="overflow-hidden rounded-lg border">
               <img src="/lovable-uploads/c1501d72-2f33-4a03-9773-b8681d031704.png" alt="Two Mel Bao branded paper bags - one with pink sticker, one with large circular logo" className="w-full h-32 object-cover" loading="lazy" />
