@@ -7,7 +7,7 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "13.0.4"
@@ -53,6 +53,141 @@ export type Database = {
           created_at?: string
           email?: string
           id?: string
+        }
+        Relationships: []
+      }
+      order_items: {
+        Row: {
+          created_at: string
+          id: string
+          order_id: string
+          product_id: string
+          quantity: number
+          total_price: number
+          unit_price: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          order_id: string
+          product_id: string
+          quantity: number
+          total_price: number
+          unit_price: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          order_id?: string
+          product_id?: string
+          quantity?: number
+          total_price?: number
+          unit_price?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_items_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "order_items_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      orders: {
+        Row: {
+          created_at: string
+          customer_email: string
+          customer_name: string
+          customer_phone: string
+          id: string
+          order_status: string
+          payment_status: string
+          pickup_date: string
+          pickup_time_end: string
+          pickup_time_start: string
+          special_instructions: string | null
+          stripe_session_id: string | null
+          total_amount: number
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          customer_email: string
+          customer_name: string
+          customer_phone: string
+          id?: string
+          order_status?: string
+          payment_status?: string
+          pickup_date: string
+          pickup_time_end: string
+          pickup_time_start: string
+          special_instructions?: string | null
+          stripe_session_id?: string | null
+          total_amount: number
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          customer_email?: string
+          customer_name?: string
+          customer_phone?: string
+          id?: string
+          order_status?: string
+          payment_status?: string
+          pickup_date?: string
+          pickup_time_end?: string
+          pickup_time_start?: string
+          special_instructions?: string | null
+          stripe_session_id?: string | null
+          total_amount?: number
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      products: {
+        Row: {
+          active: boolean | null
+          created_at: string
+          description: string | null
+          id: string
+          image_url: string | null
+          name: string
+          pieces_per_package: number
+          price: number
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          name: string
+          pieces_per_package?: number
+          price: number
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean | null
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          name?: string
+          pieces_per_package?: number
+          price?: number
+          updated_at?: string
         }
         Relationships: []
       }
