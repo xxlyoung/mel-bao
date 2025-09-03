@@ -1,11 +1,10 @@
-import heroImage1 from "@/assets/hero-image-1.jpg";
-import heroImage2 from "@/assets/hero-image-2.jpg";
 import { Button } from "@/components/ui/button";
+
 const Hero = () => {
   return <section id="home" className="relative min-h-[80vh] w-full flex items-center">
       <div className="absolute inset-0 w-full h-full grid grid-cols-2 gap-0">
-        <img src={heroImage1} alt="Mel Bao artisan bao buns" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
-        <img src={heroImage2} alt="Mel Bao branded packaging and products" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+        <img src="/lovable-uploads/40cfe013-3c5d-4d9c-beaf-43d8e4fcfc02.png" alt="Mel Bao branded paper bag with blue label" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+        <img src="/lovable-uploads/ba0ebf6c-e7d3-4e97-95f6-1c35a91ecf8f.png" alt="Mel Bao branded paper bag with orange label" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background/90" />
       <div className="container relative py-32 md:py-40">
