@@ -61,7 +61,13 @@ export default {
           'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))'
-        }
+        },
+        // Mel Bao brand colors matching the packaging
+        'mel-orange': 'hsl(var(--mel-orange))',
+        'mel-pink': 'hsl(var(--mel-pink))',
+        'mel-blue': 'hsl(var(--mel-blue))',
+        'mel-yellow': 'hsl(var(--mel-yellow))',
+        'mel-brown': 'hsl(var(--mel-brown))'
       },
       fontFamily: {
         display: ['"Playfair Display"', 'serif'],

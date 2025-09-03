@@ -8,89 +8,106 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Warm, artisan palette */
-    --background: 40 33% 97%; /* cream */
-    --foreground: 24 15% 12%;
+    /* Playful, vibrant Mel Bao palette inspired by packaging */
+    --background: 48 30% 97%; /* warm cream like the paper bags */
+    --foreground: 25 20% 15%; /* dark brown text */
 
-    --card: 40 33% 98%;
-    --card-foreground: 24 15% 12%;
+    --card: 48 25% 95%;
+    --card-foreground: 25 20% 15%;
 
-    --popover: 40 33% 98%;
-    --popover-foreground: 24 15% 12%;
+    --popover: 48 25% 95%;
+    --popover-foreground: 25 20% 15%;
 
-    --primary: 8 70% 45%; /* deep red */
-    --primary-foreground: 0 0% 98%;
+    --primary: 18 95% 55%; /* vibrant orange like the sticker */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 35 40% 92%;
-    --secondary-foreground: 24 20% 20%;
+    --secondary: 320 75% 70%; /* playful pink/purple */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 35 30% 96%;
-    --muted-foreground: 24 10% 38%;
+    --muted: 48 20% 92%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 38 85% 50%; /* warm gold */
-    --accent-foreground: 24 20% 15%;
+    --accent: 190 80% 65%; /* light blue like the third sticker */
+    --accent-foreground: 25 20% 15%;
 
-    --destructive: 0 72% 45%;
+    --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 35 25% 88%;
-    --input: 35 25% 88%;
-    --ring: 8 70% 45%;
+    --border: 48 15% 85%;
+    --input: 48 15% 88%;
+    --ring: 18 95% 55%;
 
-    --radius: 0.75rem;
+    --radius: 1rem; /* more rounded for playful feel */
 
-    /* Sidebar (not primary for now, but mapped) */
-    --sidebar-background: 40 33% 97%;
-    --sidebar-foreground: 24 15% 20%;
-    --sidebar-primary: 8 70% 45%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 38 85% 50%;
-    --sidebar-accent-foreground: 24 20% 15%;
-    --sidebar-border: 35 25% 88%;
-    --sidebar-ring: 8 70% 45%;
+    /* Brand color extensions */
+    --mel-orange: 18 95% 55%;
+    --mel-pink: 320 75% 70%;
+    --mel-blue: 190 80% 65%;
+    --mel-yellow: 50 100% 65%;
+    --mel-brown: 35 40% 75%; /* paper bag color */
 
-    /* Extras */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.25);
+    /* Sidebar */
+    --sidebar-background: 48 30% 97%;
+    --sidebar-foreground: 25 20% 15%;
+    --sidebar-primary: 18 95% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 190 80% 65%;
+    --sidebar-accent-foreground: 25 20% 15%;
+    --sidebar-border: 48 15% 85%;
+    --sidebar-ring: 18 95% 55%;
+
+    /* Enhanced gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--mel-orange)) 0%, hsl(var(--mel-pink)) 50%, hsl(var(--mel-blue)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--mel-orange)) 0%, hsl(var(--mel-yellow)) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(var(--mel-blue)) 0%, hsl(var(--mel-pink)) 100%);
+    --shadow-colorful: 0 10px 30px -10px hsl(var(--mel-orange) / 0.3);
+    --shadow-soft: 0 4px 20px -5px hsl(var(--mel-blue) / 0.2);
   }
 
   .dark {
-    --background: 24 14% 8%;
-    --foreground: 45 30% 96%;
+    --background: 25 20% 10%; /* dark brown base */
+    --foreground: 48 25% 95%;
 
-    --card: 24 14% 10%;
-    --card-foreground: 45 30% 96%;
+    --card: 25 15% 12%;
+    --card-foreground: 48 25% 95%;
 
-    --popover: 24 14% 10%;
-    --popover-foreground: 45 30% 96%;
+    --popover: 25 15% 12%;
+    --popover-foreground: 48 25% 95%;
 
-    --primary: 10 75% 55%;
+    --primary: 18 90% 60%; /* slightly muted orange for dark mode */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 24 10% 16%;
-    --secondary-foreground: 45 30% 96%;
+    --secondary: 320 60% 50%; /* deeper pink for dark mode */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 24 10% 16%;
-    --muted-foreground: 35 10% 70%;
+    --muted: 25 10% 18%;
+    --muted-foreground: 48 15% 70%;
 
-    --accent: 42 90% 60%;
-    --accent-foreground: 24 20% 10%;
+    --accent: 190 70% 55%; /* muted blue for dark mode */
+    --accent-foreground: 25 20% 10%;
 
-    --destructive: 0 65% 40%;
+    --destructive: 0 65% 45%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 24 9% 20%;
-    --input: 24 9% 20%;
-    --ring: 10 75% 55%;
+    --border: 25 10% 25%;
+    --input: 25 10% 22%;
+    --ring: 18 90% 60%;
 
-    --sidebar-background: 24 14% 8%;
-    --sidebar-foreground: 45 30% 96%;
-    --sidebar-primary: 10 75% 55%;
+    /* Dark mode brand colors */
+    --mel-orange: 18 90% 60%;
+    --mel-pink: 320 60% 50%;
+    --mel-blue: 190 70% 55%;
+    --mel-yellow: 50 90% 60%;
+    --mel-brown: 35 30% 35%;
+
+    --sidebar-background: 25 20% 10%;
+    --sidebar-foreground: 48 25% 95%;
+    --sidebar-primary: 18 90% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 42 90% 60%;
-    --sidebar-accent-foreground: 24 20% 10%;
-    --sidebar-border: 24 9% 20%;
-    --sidebar-ring: 10 75% 55%;
+    --sidebar-accent: 190 70% 55%;
+    --sidebar-accent-foreground: 25 20% 10%;
+    --sidebar-border: 25 10% 25%;
+    --sidebar-ring: 18 90% 60%;
   }
 }
 
@@ -102,5 +119,27 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-body;
+  }
+}
+
+@layer utilities {
+  .shadow-colorful {
+    box-shadow: 0 10px 30px -10px hsl(var(--mel-orange) / 0.3);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 4px 20px -5px hsl(var(--mel-blue) / 0.2);
+  }
+  
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .bg-gradient-cool {
+    background: var(--gradient-cool);
   }
 }
