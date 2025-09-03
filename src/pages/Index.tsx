@@ -1,6 +1,5 @@
 import Navbar from "@/components/melbao/Navbar";
 import Hero from "@/components/melbao/Hero";
-import Gallery from "@/components/melbao/Gallery";
 import MenuHighlights from "@/components/melbao/MenuHighlights";
 import About from "@/components/melbao/About";
 import OrderingInfo from "@/components/melbao/OrderingInfo";
@@ -50,7 +49,6 @@ const Index = () => {
       <main>
         <Hero />
         <MenuHighlights />
-        <Gallery />
         <About />
         <OrderingInfo />
         <Contact />

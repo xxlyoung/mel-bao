@@ -1,4 +1,8 @@
 import hands from "@/assets/about-hands-cooking.jpg";
+import packagingBag1 from "@/assets/packaging-bag-1.png";
+import packagingBags2 from "@/assets/packaging-bags-2.png";
+import packagingBag3 from "@/assets/packaging-bag-3.png";
+import packagingWall from "@/assets/packaging-wall-display.png";
 
 const About = () => {
   return (
@@ -15,9 +19,19 @@ const About = () => {
             Every batch is made by hand in our certified home kitchen, with warm hospitality at the heart of everything we do.
           </p>
         </div>
-        <figure className="overflow-hidden rounded-lg border">
-          <img src={hands} alt="Hands shaping bao dough in a cozy home kitchen" className="w-full h-72 object-cover" loading="lazy" />
-        </figure>
+        <div className="space-y-4">
+          <figure className="overflow-hidden rounded-lg border">
+            <img src={hands} alt="Hands shaping bao dough in a cozy home kitchen" className="w-full h-48 object-cover" loading="lazy" />
+          </figure>
+          <div className="grid grid-cols-2 gap-4">
+            <figure className="overflow-hidden rounded-lg border">
+              <img src={packagingBag1} alt="Mel Bao branded paper bag with orange sticker" className="w-full h-32 object-cover" loading="lazy" />
+            </figure>
+            <figure className="overflow-hidden rounded-lg border">
+              <img src={packagingBag3} alt="Mel Bao branded paper bag with blue sticker" className="w-full h-32 object-cover" loading="lazy" />
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
   );

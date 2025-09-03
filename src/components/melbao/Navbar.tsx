@@ -10,7 +10,6 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex items-center gap-6 text-sm">
           <a href="#menu" className="hover:opacity-80 transition">Menu</a>
-          <a href="#gallery" className="hover:opacity-80 transition">Gallery</a>
           <a href="#about" className="hover:opacity-80 transition">About</a>
           <a href="#contact" className="hover:opacity-80 transition">Contact</a>
           <a href="#order" className="hover:opacity-80 transition">Hours</a>
