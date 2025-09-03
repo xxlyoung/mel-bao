@@ -1,7 +1,11 @@
 import OrderForm from "./OrderForm";
 
 const OrderingInfo = () => {
-  return <OrderForm />;
+  return (
+    <section id="order">
+      <OrderForm />
+    </section>
+  );
 };
 
 export default OrderingInfo;
