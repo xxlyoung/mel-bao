@@ -11,7 +11,7 @@ const Navbar = () => {
           <a href="#gallery" className="hover:opacity-80 transition">Gallery</a>
           <a href="#about" className="hover:opacity-80 transition">About</a>
           
-          <a href="#order" className="hover:opacity-80 transition">Hours</a>
+          
         </div>
         <div className="hidden md:block">
           <a href="#contact">
