@@ -21,6 +21,7 @@ const buttonVariants = cva(
         hero: "bg-gradient-to-r from-mel-orange via-mel-pink to-mel-blue text-white shadow-colorful hover:opacity-95 hover:scale-105 transition-all duration-300",
         playful: "bg-mel-yellow text-foreground hover:bg-mel-yellow/90 shadow-soft",
         cool: "bg-mel-blue text-white hover:bg-mel-blue/90 shadow-soft",
+        pink: "bg-mel-pink text-white hover:bg-mel-pink/90 shadow-soft"
       },
       size: {
         default: "h-10 px-4 py-2",
