@@ -93,7 +93,7 @@ const Contact = () => {
             <Input name="name" value={name} onChange={e => setName(e.target.value)} placeholder="Your name" aria-label="Your name" required />
             <Input name="email" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" aria-label="Email" required />
             <Textarea name="message" value={message} onChange={e => setMessage(e.target.value)} placeholder="Your message" aria-label="Your message" required />
-            <Button type="submit" variant="hero" disabled={isSubmitting}>
+            <Button type="submit" variant="playful" disabled={isSubmitting}>
               {isSubmitting ? "Sending..." : "Send"}
             </Button>
           </form>
