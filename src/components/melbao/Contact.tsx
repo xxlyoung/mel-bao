@@ -107,7 +107,7 @@ const Contact = () => {
           <div className="mt-8 text-sm">
             <p>Pickup: Los Altos, CA. Local delivery only available when inquired.</p>
             <div className="flex gap-4 mt-2">
-              <a className="underline" href="#">Instagram</a>
+              <a className="underline" href="https://www.instagram.com/mel__bao/" target="_blank" rel="noopener noreferrer">Instagram</a>
               
             </div>
           </div>
