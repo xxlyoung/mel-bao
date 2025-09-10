@@ -13,7 +13,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground">Handcrafted baby- and toddler-friendly buns with simple, organic ingredients. Made fresh daily in a certified home kitchen in Los Altos, California.</p>
           <div className="flex flex-wrap gap-3">
-            <a href="#menu"><Button variant="hero">View Menu</Button></a>
+            <a href="#menu"><Button variant="cool">View Menu</Button></a>
             
           </div>
         </div>
