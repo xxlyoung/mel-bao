@@ -15,7 +15,7 @@ const Navbar = () => {
         
         <div className="hidden md:block">
           <a href="#order">
-            <Button variant="hero">Order Now</Button>
+            <Button variant="playful">Order Now</Button>
           </a>
         </div>
       </nav>
