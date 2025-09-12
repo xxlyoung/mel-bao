@@ -5,9 +5,9 @@ const items = [{
   img: "/lovable-uploads/69437822-4cb1-4629-a80a-b67894698184.png",
   ingredients: ["Organic wheat flour", "Organic whole milk", "Organic sesame powder", "Yeast"]
 }, {
-  name: "Banana Bun",
+  name: "Seasonal Bun",
   img: "/lovable-uploads/54ba5924-1524-47dc-8fc7-825cc28fcd97.png",
-  ingredients: ["Organic wheat flour", "Organic whole milk", "Organic banana", "Yeast"]
+  ingredients: ["Organic wheat flour", "Organic whole milk", "Organic tomato", "Organic raisins", "Yeast"]
 }];
 const MenuHighlights = () => {
   return <section id="menu" className="container py-16 md:py-24">
