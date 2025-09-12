@@ -77,7 +77,7 @@ const InstagramFeed = () => {
           <blockquote 
             className="instagram-media" 
             data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE2/"
+            data-instgrm-permalink="https://www.instagram.com/p/DOMiiP9Er0M/"
             data-instgrm-version="14"
             style={{
               background: '#FFF',
@@ -93,7 +93,7 @@ const InstagramFeed = () => {
           >
             <div style={{ padding: '16px' }}>
               <a 
-                href="https://www.instagram.com/p/EXAMPLE2/" 
+                href="https://www.instagram.com/p/DOMiiP9Er0M/" 
                 style={{
                   background: '#FFFFFF',
                   lineHeight: 0,
@@ -116,7 +116,7 @@ const InstagramFeed = () => {
           <blockquote 
             className="instagram-media" 
             data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE3/"
+            data-instgrm-permalink="https://www.instagram.com/p/DORxAh6Enpn/"
             data-instgrm-version="14"
             style={{
               background: '#FFF',
@@ -132,7 +132,7 @@ const InstagramFeed = () => {
           >
             <div style={{ padding: '16px' }}>
               <a 
-                href="https://www.instagram.com/p/EXAMPLE3/" 
+                href="https://www.instagram.com/p/DORxAh6Enpn/" 
                 style={{
                   background: '#FFFFFF',
                   lineHeight: 0,
@@ -155,7 +155,7 @@ const InstagramFeed = () => {
           <blockquote 
             className="instagram-media" 
             data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE4/"
+            data-instgrm-permalink="https://www.instagram.com/p/DOcs-aWFPUu/?img_index=2"
             data-instgrm-version="14"
             style={{
               background: '#FFF',
@@ -171,7 +171,7 @@ const InstagramFeed = () => {
           >
             <div style={{ padding: '16px' }}>
               <a 
-                href="https://www.instagram.com/p/EXAMPLE4/" 
+                href="https://www.instagram.com/p/DOcs-aWFPUu/?img_index=2" 
                 style={{
                   background: '#FFFFFF',
                   lineHeight: 0,
