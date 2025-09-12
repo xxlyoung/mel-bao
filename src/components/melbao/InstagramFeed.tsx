@@ -116,7 +116,7 @@ const InstagramFeed = () => {
           <blockquote 
             className="instagram-media" 
             data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE3/"
+            data-instgrm-permalink="https://www.instagram.com/p/DORxAh6Enpn/"
             data-instgrm-version="14"
             style={{
               background: '#FFF',
@@ -132,7 +132,7 @@ const InstagramFeed = () => {
           >
             <div style={{ padding: '16px' }}>
               <a 
-                href="https://www.instagram.com/p/EXAMPLE3/" 
+                href="https://www.instagram.com/p/DORxAh6Enpn/" 
                 style={{
                   background: '#FFFFFF',
                   lineHeight: 0,
