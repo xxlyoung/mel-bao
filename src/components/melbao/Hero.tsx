@@ -8,12 +8,10 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background/90" />
       <div className="container relative py-32 md:py-40">
         <div className="max-w-2xl space-y-6 animate-enter">
-          <h1 className="font-display text-4xl md:text-6xl leading-tight">
-            Homemade baos for little tummies
-          </h1>
+          <h1 className="font-display text-4xl md:text-6xl leading-tight">Buns for little tummies</h1>
           <p className="text-lg md:text-xl text-muted-foreground">
         </p>
-                    <p className="text-lg md:text-xl text-muted-foreground">Small batch and made fresh daily in a certified home kitchen in Los Altos, California.</p>
+                    <p className="text-lg md:text-xl text-muted-foreground">Small batch and made fresh in a certified home kitchen</p>
 
            <h2 className="font-display text-3xl md:text-4xl">Our Story</h2>
           <p className="mt-4 text-muted-foreground">Mel Bao is a Microenterprise Home Kitchen Operation (MEHKO) run by a new parents. We craft Asian-inspired, baby- and toddler-friendly buns with a focus on fresh, organic ingredients and authentic flavors.
