@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import banana from "@/assets/menu-banana-bun.jpg";
 
 const items = [{
   name: "Sesame Bun",
@@ -7,7 +6,7 @@ const items = [{
   ingredients: ["Organic wheat flour", "Organic whole milk", "Organic sesame powder", "Yeast"]
 }, {
   name: "Banana Bun",
-  img: banana,
+  img: "/lovable-uploads/54ba5924-1524-47dc-8fc7-825cc28fcd97.png",
   ingredients: ["Organic wheat flour", "Organic whole milk", "Organic banana", "Yeast"]
 }];
 const MenuHighlights = () => {
