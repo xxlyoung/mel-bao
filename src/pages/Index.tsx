@@ -5,6 +5,7 @@ import About from "@/components/melbao/About";
 import InstagramFeed from "@/components/melbao/InstagramFeed";
 import OrderingInfo from "@/components/melbao/OrderingInfo";
 import Contact from "@/components/melbao/Contact";
+import Footer from "@/components/melbao/Footer";
 import StickyCTA from "@/components/melbao/StickyCTA";
 import { Helmet } from "react-helmet-async";
 import { useMemo } from "react";
@@ -66,6 +67,9 @@ const Index = () => {
           <Contact />
         </div>
       </main>
+      <div className="h-screen snap-start snap-always snap-section flex items-center">
+        <Footer />
+      </div>
       <StickyCTA />
     </div>
   );

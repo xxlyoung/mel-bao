@@ -84,55 +84,36 @@ const Contact = () => {
       setIsSubscribing(false);
     }
   };
-  return <section id="contact" className="h-full flex flex-col justify-between py-8">
-      <div className="container flex-1 flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
-          <div>
-            <h2 className="font-display text-3xl md:text-4xl">Get in touch</h2>
-            <p className="mt-2 text-muted-foreground">Questions or orders? Send us a note below.</p>
-            <form onSubmit={onSubmit} className="mt-6 space-y-4 max-w-md">
-              <Input name="name" value={name} onChange={e => setName(e.target.value)} placeholder="Your name" aria-label="Your name" required />
-              <Input name="email" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" aria-label="Email" required />
-              <Textarea name="message" value={message} onChange={e => setMessage(e.target.value)} placeholder="Your message" aria-label="Your message" required />
-              <Button type="submit" variant="playful" disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send"}
-              </Button>
-            </form>
+  return <section id="contact" className="container h-full flex items-center py-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h2 className="font-display text-3xl md:text-4xl">Get in touch</h2>
+          <p className="mt-2 text-muted-foreground">Questions or orders? Send us a note below.</p>
+          <form onSubmit={onSubmit} className="mt-6 space-y-4 max-w-md">
+            <Input name="name" value={name} onChange={e => setName(e.target.value)} placeholder="Your name" aria-label="Your name" required />
+            <Input name="email" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" aria-label="Email" required />
+            <Textarea name="message" value={message} onChange={e => setMessage(e.target.value)} placeholder="Your message" aria-label="Your message" required />
+            <Button type="submit" variant="playful" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send"}
+            </Button>
+          </form>
 
-            <div className="mt-10 max-w-md">
-              
-              
-              
-            </div>
+          <div className="mt-10 max-w-md">
+            
+            
+            
+          </div>
 
-            <div className="mt-8 text-sm">
-              <p>Pickup: Los Altos, CA. Local delivery only available when inquired.</p>
-              <div className="flex gap-4 mt-2">
-                <a className="underline" href="https://www.instagram.com/mel__bao/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                
-              </div>
+          <div className="mt-8 text-sm">
+            <p>Pickup: Los Altos, CA. Local delivery only available when inquired.</p>
+            <div className="flex gap-4 mt-2">
+              <a className="underline" href="https://www.instagram.com/mel__bao/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              
             </div>
           </div>
-          
         </div>
+        
       </div>
-      
-      {/* Footer content */}
-      <footer className="border-t bg-background">
-        <div className="container py-6 text-sm">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <p className="text-muted-foreground">
-              © {new Date().getFullYear()} Mel Bao • Made in a Home Kitchen. Permitted by Santa Clara County Department of Environmental Health. Permit #PT0505791
-            </p>
-            <nav className="flex gap-4">
-              <a href="#menu" className="hover:opacity-80 transition">Menu</a>
-              <a href="#instagram" className="hover:opacity-80 transition">Gallery</a>
-              <a href="#about" className="hover:opacity-80 transition">About</a>
-              <a href="#contact" className="hover:opacity-80 transition">Contact</a>
-            </nav>
-          </div>
-        </div>
-      </footer>
     </section>;
 };
 export default Contact;
