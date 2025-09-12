@@ -149,6 +149,7 @@ const InstagramFeed = () => {
             </div>
           </blockquote>
         </div>
+      </div>
 
       <div className="text-center mt-8">
         <a 
