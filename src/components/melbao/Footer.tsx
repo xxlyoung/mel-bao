@@ -8,8 +8,6 @@ const Footer = () => {
           </p>
           <nav className="flex gap-4">
             <a href="#menu" className="hover:opacity-80">Menu</a>
-            <a href="#gallery" className="hover:opacity-80">Gallery</a>
-            <a href="#about" className="hover:opacity-80">About</a>
             <a href="#contact" className="hover:opacity-80">Contact</a>
           </nav>
         </div>
