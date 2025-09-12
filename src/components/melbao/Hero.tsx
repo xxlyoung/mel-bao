@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container relative py-32 md:py-40">
         <div className="max-w-2xl space-y-6 animate-enter">
           <h1 className="font-display text-4xl md:text-6xl leading-tight">
-            Freshly Made, Lovingly Crafted – From Our Home Kitchen to Your Table
+            Homemade baos for little tummies
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground">Handcrafted baby- and toddler-friendly buns with simple, organic ingredients. Made fresh daily in a certified home kitchen in Los Altos, California.</p>
           <div className="flex flex-wrap gap-3">
