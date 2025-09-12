@@ -70,8 +70,8 @@ export default {
         'mel-brown': 'hsl(var(--mel-brown))'
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
-        body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        display: ['"Bubblegum Sans"', 'cursive', 'sans-serif'],
+        body: ['"Bubblegum Sans"', 'cursive', 'sans-serif']
       },
       borderRadius: {
         lg: 'var(--radius)',
