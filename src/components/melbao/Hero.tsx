@@ -11,7 +11,7 @@ const Hero = () => {
           <h1 className="font-display text-4xl md:text-6xl leading-tight">
             Homemade baos for little tummies
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground">Handcrafted baby- and toddler-friendly buns with simple, organic ingredients. Made fresh daily in a certified home kitchen in Los Altos, California.</p>
+          <p className="text-lg md:text-xl text-muted-foreground">Organic * No sugar/salt * No egg * No nuts * Small batch * Made fresh daily in a certified home kitchen in Los Altos, California.</p>
           <div className="flex flex-wrap gap-3">
             
             
