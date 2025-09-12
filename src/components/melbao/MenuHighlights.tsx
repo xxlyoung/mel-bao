@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const items = [{
   name: "Sesame Bun",
   img: "/lovable-uploads/69437822-4cb1-4629-a80a-b67894698184.png",
@@ -12,10 +11,8 @@ const items = [{
 const MenuHighlights = () => {
   return <section id="menu" className="container py-16 md:py-24">
       <div className="max-w-3xl mb-10">
-        <h2 className="font-display text-3xl md:text-4xl">Menu</h2>
-        <p className="text-muted-foreground mt-2">
-          Freshly made, baby- and toddler-friendly buns from our certified home kitchen.
-        </p>
+        <h2 className="font-display text-3xl md:text-4xl">Sample Menu</h2>
+        
         
       </div>
 
