@@ -1,19 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import sesame from "@/assets/menu-sesame-bun.jpg";
 import banana from "@/assets/menu-banana-bun.jpg";
-import yam from "@/assets/menu-yam-bun.jpg";
+
 const items = [{
   name: "Sesame Bun",
-  img: sesame,
+  img: "/lovable-uploads/69437822-4cb1-4629-a80a-b67894698184.png",
   ingredients: ["Organic wheat flour", "Organic whole milk", "Organic sesame powder", "Yeast"]
 }, {
   name: "Banana Bun",
   img: banana,
   ingredients: ["Organic wheat flour", "Organic whole milk", "Organic banana", "Yeast"]
-}, {
-  name: "Yam Bun",
-  img: yam,
-  ingredients: ["Organic wheat flour", "Organic whole milk", "Organic yam", "Yeast"]
 }];
 const MenuHighlights = () => {
   return <section id="menu" className="container py-16 md:py-24">
