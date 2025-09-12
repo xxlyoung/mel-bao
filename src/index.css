@@ -143,3 +143,27 @@ All colors MUST be HSL.
     background: var(--gradient-cool);
   }
 }
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scroll snap styles */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Ensure proper scroll snap on mobile */
+@media (max-width: 768px) {
+  .snap-container {
+    scroll-padding-top: 4rem; /* Account for mobile navbar */
+  }
+}

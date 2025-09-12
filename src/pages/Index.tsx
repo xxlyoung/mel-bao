@@ -39,7 +39,7 @@ const Index = () => {
   };
 
   return (
-    <div>
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory snap-container">
       <Helmet>
         <title>Mel Bao | Baby-Friendly Artisan Buns in Los Altos</title>
         <meta name="description" content="Photo-first MEHKO bakery in Los Altos by Dennis Hou & Phoebe Chen — baby- and toddler-friendly artisan buns made fresh daily." />
@@ -48,14 +48,28 @@ const Index = () => {
       </Helmet>
       <Navbar />
       <main>
-        <Hero />
-        <MenuHighlights />
-        <About />
-        <InstagramFeed />
-        <OrderingInfo />
-        <Contact />
+        <div className="h-screen snap-start snap-always snap-section flex items-center">
+          <Hero />
+        </div>
+        <div className="h-screen snap-start snap-always snap-section flex items-center">
+          <MenuHighlights />
+        </div>
+        <div className="h-screen snap-start snap-always snap-section flex items-center">
+          <About />
+        </div>
+        <div className="h-screen snap-start snap-always snap-section flex items-center">
+          <InstagramFeed />
+        </div>
+        <div className="h-screen snap-start snap-always snap-section flex items-center">
+          <OrderingInfo />
+        </div>
+        <div className="h-screen snap-start snap-always snap-section flex items-center">
+          <Contact />
+        </div>
       </main>
-      <Footer />
+      <div className="h-screen snap-start snap-always snap-section flex items-center">
+        <Footer />
+      </div>
       <StickyCTA />
     </div>
   );

@@ -16,7 +16,7 @@ const items = [{
   ingredients: ["Organic wheat flour", "Organic whole milk", "Organic yam", "Yeast"]
 }];
 const MenuHighlights = () => {
-  return <section id="menu" className="container py-16 md:py-24">
+  return <section id="menu" className="container h-full flex flex-col justify-center py-8">
       <div className="max-w-3xl mb-10">
         <h2 className="font-display text-3xl md:text-4xl">Menu</h2>
         <p className="text-muted-foreground mt-2">

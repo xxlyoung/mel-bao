@@ -2,7 +2,7 @@ import OrderForm from "./OrderForm";
 
 const OrderingInfo = () => {
   return (
-    <section id="order">
+    <section id="order" className="h-full flex items-center">
       <OrderForm />
     </section>
   );
