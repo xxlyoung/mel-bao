@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 const Hero = () => {
-  return <section id="home" className="relative h-full w-full flex items-center">
+  return <section id="home" className="relative min-h-[80vh] w-full flex items-center">
       <div className="absolute top-0 right-0 w-1/2 h-full">
         <img src="/lovable-uploads/471bacc7-5249-4498-868b-58fab331450b.png" alt="Mel Bao branded packaging bags" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
       </div>

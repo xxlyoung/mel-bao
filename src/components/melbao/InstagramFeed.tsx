@@ -16,7 +16,7 @@ const InstagramFeed = () => {
   }, []);
 
   return (
-    <section id="instagram" className="container h-full flex flex-col justify-center py-8">
+    <section id="instagram" className="container py-16 md:py-24">
       <div className="text-center mb-12">
         <h2 className="font-display text-3xl md:text-4xl mb-4">Follow Our Journey</h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

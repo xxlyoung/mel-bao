@@ -84,7 +84,7 @@ const Contact = () => {
       setIsSubscribing(false);
     }
   };
-  return <section id="contact" className="container h-full flex items-center py-8">
+  return <section id="contact" className="container py-16 md:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
           <h2 className="font-display text-3xl md:text-4xl">Get in touch</h2>
