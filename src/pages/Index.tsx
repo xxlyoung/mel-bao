@@ -50,7 +50,7 @@ const Index = () => {
       <main>
         <Hero />
         <MenuHighlights />
-        <About />
+        
         <InstagramFeed />
         <OrderingInfo />
         <Contact />
