@@ -38,7 +38,7 @@ const InstagramFeed = () => {
           <blockquote 
             className="instagram-media" 
             data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE1/"
+            data-instgrm-permalink="https://www.instagram.com/p/DOMhINfkqpO/"
             data-instgrm-version="14"
             style={{
               background: '#FFF',
