@@ -159,7 +159,7 @@ const OrderForm = () => {
       <div className="max-w-4xl mx-auto">
         <div className="max-w-3xl mb-10">
           <h2 className="font-display text-3xl md:text-4xl">Order Your Buns</h2>
-          <p className="text-muted-foreground mt-2">Fresh buns made to order. Each package contains 10 pieces for $8. Pickup Wednesday or Sunday, 5-7pm.</p>
+          <p className="text-muted-foreground mt-2">Fresh buns made to order. Each package contains 10 buns. Pickup Wednesday or Sunday, 5-7pm.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -169,6 +169,7 @@ const OrderForm = () => {
             {products.map(product => <Card key={product.id}>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
+                    <img src={product.image_url} alt={product.name} className="w-20 h-20 object-cover rounded-md" />
                     <div className="flex-1">
                       <h4 className="font-display font-semibold">{product.name}</h4>
                       <p className="text-sm text-muted-foreground">${(product.price / 100).toFixed(2)} per package</p>
