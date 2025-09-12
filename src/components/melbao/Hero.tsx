@@ -11,13 +11,10 @@ const Hero = () => {
           <h1 className="font-display text-4xl md:text-6xl leading-tight">Buns for little tummies</h1>
           <p className="text-lg md:text-xl text-muted-foreground">
         </p>
-                    <p className="text-lg md:text-xl text-muted-foreground">Small batch and made fresh in a certified home kitchen</p>
+                    <p className="text-lg md:text-xl text-muted-foreground">Mel Bao - Small batch and made fresh in a certified home kitchen</p>
 
            <h2 className="font-display text-3xl md:text-4xl">Our Story</h2>
-          <p className="mt-4 text-muted-foreground">Mel Bao is a Microenterprise Home Kitchen Operation (MEHKO) run by a new parents. We craft Asian-inspired, baby- and toddler-friendly buns with a focus on fresh, organic ingredients and authentic flavors.
-
-
-We don't add any sugar/salt/egg to our product. </p>
+          <p className="mt-4 text-muted-foreground">We are a Microenterprise Home Kitchen Operation (MEHKO) run by a new parents. We craft Asian-inspired, baby- and toddler-friendly buns with a focus on fresh, organic ingredients and authentic flavors. We don't add any sugar/salt/egg to our product. </p>
           <div className="flex flex-wrap gap-3">
             
             
