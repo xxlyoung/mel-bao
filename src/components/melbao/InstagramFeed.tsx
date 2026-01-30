@@ -16,31 +16,39 @@ const InstagramFeed = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    console.log('InstagramFeed: Component mounted');
     fetchInstagramPosts();
   }, []);
 
   const fetchInstagramPosts = async () => {
+    console.log('InstagramFeed: Starting to fetch posts...');
     try {
       // Instagram Basic Display API - token only allows reading own public posts
       const accessToken = 'IGAARxMbjxYXpBZAGJQMUp6cGE3VXBSUnYzRHJHLUs1ckFFSXRndi0zUjVSdFdhOHJXeG5RNWNaOE5Gbmt4enVWblY4VzcxeGhKYjgxbG02VklKYkluY09UV1FzeEV2V0pqLXdFbGk1UHFoeXhtVzZAlZADM0ZAXpLaDhPMnlEZADR0MAZDZD';
       
-      const response = await fetch(
-        `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=3&access_token=${accessToken}`
-      );
+      const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=3&access_token=${accessToken}`;
+      console.log('InstagramFeed: Fetching from URL...');
+      
+      const response = await fetch(url);
+      console.log('InstagramFeed: Response status:', response.status);
       
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('InstagramFeed: Error response:', errorText);
         throw new Error('Failed to fetch posts');
       }
 
       const data = await response.json();
+      console.log('InstagramFeed: Got data:', data);
       
       if (data.data) {
+        console.log('InstagramFeed: Setting posts:', data.data.length);
         setPosts(data.data);
       } else {
         throw new Error('Invalid response');
       }
     } catch (err) {
-      console.error('Error fetching Instagram posts:', err);
+      console.error('InstagramFeed: Error:', err);
       setError('Unable to load Instagram posts');
     } finally {
       setLoading(false);
