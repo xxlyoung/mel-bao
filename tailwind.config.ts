@@ -70,8 +70,8 @@ export default {
         'mel-brown': 'hsl(var(--mel-brown))'
       },
       fontFamily: {
-        display: ['"Bubblegum Sans"', 'cursive', 'sans-serif'],
-        body: ['"Bubblegum Sans"', 'cursive', 'sans-serif']
+        display: ['Fredoka', 'sans-serif'],
+        body: ['Fredoka', 'sans-serif']
       },
       borderRadius: {
         lg: 'var(--radius)',
