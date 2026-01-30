@@ -21,7 +21,12 @@ const InstagramFeed = () => {
 
   const fetchInstagramPosts = async () => {
     try {
-      const response = await fetch('/api/instagram');
+      // Instagram Basic Display API - token only allows reading own public posts
+      const accessToken = 'IGAARxMbjxYXpBZAGJQMUp6cGE3VXBSUnYzRHJHLUs1ckFFSXRndi0zUjVSdFdhOHJXeG5RNWNaOE5Gbmt4enVWblY4VzcxeGhKYjgxbG02VklKYkluY09UV1FzeEV2V0pqLXdFbGk1UHFoeXhtVzZAlZADM0ZAXpLaDhPMnlEZADR0MAZDZD';
+      
+      const response = await fetch(
+        `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=3&access_token=${accessToken}`
+      );
       
       if (!response.ok) {
         throw new Error('Failed to fetch posts');
@@ -29,8 +34,8 @@ const InstagramFeed = () => {
 
       const data = await response.json();
       
-      if (data.success && data.posts) {
-        setPosts(data.posts);
+      if (data.data) {
+        setPosts(data.data);
       } else {
         throw new Error('Invalid response');
       }
