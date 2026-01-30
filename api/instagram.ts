@@ -1,7 +1,6 @@
-// Vercel Serverless Function to fetch Instagram posts
-// Token is stored in INSTAGRAM_ACCESS_TOKEN environment variable
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-module.exports = async function handler(req, res) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
@@ -17,7 +16,6 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    // Fetch user's media from Instagram Basic Display API
     const response = await fetch(
       `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=3&access_token=${accessToken}`
     );
@@ -30,7 +28,6 @@ module.exports = async function handler(req, res) {
 
     const data = await response.json();
     
-    // Return the posts
     return res.status(200).json({
       posts: data.data || [],
       success: true
