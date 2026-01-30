@@ -11,3 +11,4 @@ export const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbzVodO
 
 // Set to true to enable Google Sheets integration
 export const SHEETS_ENABLED = !!GOOGLE_SHEETS_URL;
+// Force deploy Thu Jan 29 22:26:39 PST 2026
