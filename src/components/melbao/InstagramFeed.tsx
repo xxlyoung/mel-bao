@@ -43,7 +43,7 @@ const InstagramFeed = () => {
         }
       } else {
         // Development: Call Instagram API directly
-        const accessToken = 'IGAARxMbjxYXpBZAGJQMUp6cGE3VXBSUnYzRHJHLUs1ckFFSXRndi0zUjVSdFdhOHJXeG5RNWNaOE5Gbmt4enVWblY4VzcxeGhKYjgxbG02VklKYkluY09UV1FzeEV2V0pqLXdFbGk1UHFoeHhtVzZAlZADM0ZAXpLaDhPMnlEZADR0MAZDZD';
+        const accessToken = 'IGAAWfTJ6IZCaBBZAGItSE1GWDd6dWdwc2JuY19DNDU3ZAUs2UzFTdDlibDZAIaFlocmFUWHhWcE1heDU3TnN3Q3Yza21pNEFxOWFHVHdHTl9teW5aTVBmS2xUZAk1nZA0RYLVJSNzBjeE8tT2dIR2FtUG42UTRaTWtpQjlfSWppNy1MNAZDZD';
         const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=3&access_token=${accessToken}`;
         
         const response = await fetch(url);
