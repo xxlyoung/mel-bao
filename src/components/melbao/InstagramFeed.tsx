@@ -23,23 +23,46 @@ const InstagramFeed = () => {
   const fetchInstagramPosts = async () => {
     console.log('InstagramFeed: Starting to fetch posts...');
     try {
-      // Use serverless function to keep token secure
-      const response = await fetch('/api/instagram');
-      console.log('InstagramFeed: Response status:', response.status);
+      let data;
       
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('InstagramFeed: Error response:', errorText);
-        throw new Error('Failed to fetch posts');
-      }
-
-      const data = await response.json();
-      console.log('InstagramFeed: Got data:', data);
-      
-      if (data.posts) {
-        console.log('InstagramFeed: Setting posts:', data.posts.length);
-        setPosts(data.posts);
+      // In production, use serverless function. In dev, call Instagram directly
+      if (import.meta.env.PROD) {
+        const response = await fetch('/api/instagram');
+        console.log('InstagramFeed: Response status:', response.status);
+        
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('InstagramFeed: Error response:', errorText);
+          throw new Error('Failed to fetch posts');
+        }
+        
+        data = await response.json();
+        if (data.posts) {
+          console.log('InstagramFeed: Setting posts:', data.posts.length);
+          setPosts(data.posts);
+        }
       } else {
+        // Development: Call Instagram API directly
+        const accessToken = 'IGAARxMbjxYXpBZAGJQMUp6cGE3VXBSUnYzRHJHLUs1ckFFSXRndi0zUjVSdFdhOHJXeG5RNWNaOE5Gbmt4enVWblY4VzcxeGhKYjgxbG02VklKYkluY09UV1FzeEV2V0pqLXdFbGk1UHFoeHhtVzZAlZADM0ZAXpLaDhPMnlEZADR0MAZDZD';
+        const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=3&access_token=${accessToken}`;
+        
+        const response = await fetch(url);
+        console.log('InstagramFeed: Response status:', response.status);
+        
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('InstagramFeed: Error response:', errorText);
+          throw new Error('Failed to fetch posts');
+        }
+        
+        data = await response.json();
+        if (data.data) {
+          console.log('InstagramFeed: Setting posts:', data.data.length);
+          setPosts(data.data);
+        }
+      }
+      
+      if (!data || (!data.posts && !data.data)) {
         throw new Error('Invalid response');
       }
     } catch (err) {
