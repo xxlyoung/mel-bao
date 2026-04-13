@@ -1,7 +1,6 @@
 import Navbar from "@/components/melbao/Navbar";
 import Hero from "@/components/melbao/Hero";
 import MenuHighlights from "@/components/melbao/MenuHighlights";
-import About from "@/components/melbao/About";
 import InstagramFeed from "@/components/melbao/InstagramFeed";
 import OrderingInfo from "@/components/melbao/OrderingInfo";
 import Contact from "@/components/melbao/Contact";
@@ -27,22 +26,25 @@ const Index = () => {
     areaServed: "Los Altos, CA",
     founders: [
       { "@type": "Person", name: "Dennis Hou" },
-      { "@type": "Person", name: "Phoebe Chen" }
+      { "@type": "Person", name: "Phoebe Chen" },
     ],
     servesCuisine: "Asian",
     openingHoursSpecification: [
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "08:00", closes: "20:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday"], opens: "08:00", closes: "12:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "08:00", closes: "18:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:00", closes: "20:00" }
-    ]
+      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:00", closes: "20:00" },
+    ],
   };
 
   return (
     <div>
       <Helmet>
         <title>Mel Bao | Baby-Friendly Artisan Buns in Los Altos</title>
-        <meta name="description" content="Photo-first MEHKO bakery in Los Altos by Dennis Hou & Phoebe Chen — baby- and toddler-friendly artisan buns made fresh daily." />
+        <meta
+          name="description"
+          content="Photo-first MEHKO bakery in Los Altos by Dennis Hou & Phoebe Chen — baby- and toddler-friendly artisan buns made fresh daily."
+        />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
       </Helmet>
@@ -50,9 +52,8 @@ const Index = () => {
       <main>
         <Hero />
         <MenuHighlights />
-        
-        <InstagramFeed />
         <OrderingInfo />
+        <InstagramFeed />
         <Contact />
       </main>
       <Footer />

@@ -1,0 +1,21 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[dev]
+  command = "npm run dev"
+  port = 9000
+  targetPort = 8080
+
+# Redirect /api/* to Netlify functions so frontend fetch paths stay unchanged
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA fallback — serve index.html for all client-side routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

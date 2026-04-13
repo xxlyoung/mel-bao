@@ -66,7 +66,7 @@ const OrderCancelled = () => {
           </Card>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/#order">
+            <Link to="/#menu">
               <Button size="lg">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Try Again
