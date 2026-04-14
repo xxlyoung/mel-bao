@@ -23,6 +23,7 @@ const OrderForm = () => {
     removeItem,
     getTotalItems,
     getTotalPrice,
+    getDiscount,
   } = useCart();
   const [customerName, setCustomerName] = useState("");
   const [customerEmail, setCustomerEmail] = useState("");
@@ -34,6 +35,8 @@ const OrderForm = () => {
 
   const totalItems = getTotalItems();
   const totalPrice = getTotalPrice();
+  const discount = getDiscount();
+  const finalPrice = totalPrice - discount;
 
   const getNextSevenDays = () => {
     const dates = [];
@@ -188,9 +191,22 @@ const OrderForm = () => {
                     </div>
                   );
                 })}
-                <div className="flex justify-between text-lg font-bold border-t pt-4 mt-4">
-                  <span>Total</span>
-                  <span>${(totalPrice / 100).toFixed(2)}</span>
+                <div className="border-t pt-4 mt-4 space-y-2">
+                  <div className="flex justify-between text-sm text-muted-foreground">
+                    <span>Subtotal ({totalItems} packs)</span>
+                    <span>${(totalPrice / 100).toFixed(2)}</span>
+                  </div>
+                  {discount > 0 && (
+                    <div className="flex justify-between text-sm text-green-600 font-medium">
+                      <span>Bulk Discount</span>
+                      <span>-${(discount / 100).toFixed(2)}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between text-lg font-bold">
+                    <span>Total</span>
+                    <span>${(finalPrice / 100).toFixed(2)}</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">+ 3% processing fee at checkout</p>
                 </div>
               </div>
             </CardContent>
@@ -297,7 +313,7 @@ const OrderForm = () => {
           >
             {isProcessing
               ? "Redirecting to Stripe..."
-              : `Pay $${(totalPrice / 100).toFixed(2)} with Stripe`}
+              : `Pay $${(finalPrice / 100).toFixed(2)} with Stripe`}
           </Button>
 
           <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">

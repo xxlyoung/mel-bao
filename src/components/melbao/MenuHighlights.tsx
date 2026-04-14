@@ -18,6 +18,15 @@ const MenuHighlights = () => {
         </p>
       </div>
 
+      <div className="mb-8 rounded-lg border border-green-200 bg-green-50 px-5 py-4">
+        <p className="font-display font-semibold text-green-800">
+          Bulk Discount: Save $5 for every 5 packs!
+        </p>
+        <p className="text-sm text-green-700 mt-1">
+          Order 5 packs and get $5 off, 10 packs for $10 off, 15 packs for $15 off, and so on.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => {
           const qty = getItemQuantity(product.id);

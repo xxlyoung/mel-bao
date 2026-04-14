@@ -82,7 +82,43 @@ export const handler: Handler = async (event) => {
       });
     }
 
+    const subtotal = lineItems.reduce(
+      (sum, item) => sum + (item.price_data!.unit_amount as number) * (item.quantity as number),
+      0,
+    );
+    const surcharge = Math.round(subtotal * 0.03);
+
+    lineItems.push({
+      price_data: {
+        currency: "usd",
+        product_data: {
+          name: "Processing Fee",
+          description: "3% payment processing surcharge",
+        },
+        unit_amount: surcharge,
+      },
+      quantity: 1,
+    });
+
     const stripe = new Stripe(secretKey);
+
+    const totalQuantity = items.reduce(
+      (sum: number, item: { quantity: number }) => sum + item.quantity,
+      0,
+    );
+    const discountMultiplier = Math.floor(totalQuantity / 5);
+
+    let discounts: Stripe.Checkout.SessionCreateParams.Discount[] | undefined;
+    if (discountMultiplier > 0) {
+      const coupon = await stripe.coupons.create({
+        amount_off: discountMultiplier * 500,
+        currency: "usd",
+        name: `Bulk Discount ($${discountMultiplier * 5} off for ${totalQuantity} packs)`,
+        duration: "once",
+        max_redemptions: 1,
+      });
+      discounts = [{ coupon: coupon.id }];
+    }
 
     const origin =
       event.headers.origin ||
@@ -94,6 +130,7 @@ export const handler: Handler = async (event) => {
       mode: "payment",
       customer_email: customerEmail,
       line_items: lineItems,
+      ...(discounts ? { discounts } : {}),
       metadata: {
         customerName,
         customerPhone,
