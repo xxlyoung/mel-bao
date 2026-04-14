@@ -1,7 +1,10 @@
 export interface Product {
   id: string;
   name: string;
+  nameChinese: string;
   description: string;
+  ingredients: string;
+  allergens: string;
   price: number; // in cents
   pieces_per_package: number;
   image_url: string;
@@ -9,35 +12,58 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "sesame-bun",
-    name: "Sesame Bun",
-    description: "Classic sesame-topped bun with sweet filling",
-    price: 1500, // $15.00
+    id: "sweet-potato",
+    name: "Organic Sweet Potato Bao",
+    nameChinese: "有機地瓜饅頭",
+    description: "Golden sweet potato bao with a naturally sweet, vibrant flavor",
+    ingredients: "Organic unbleached all-purpose flour, organic sweet potato, organic olive oil, yeast",
+    allergens: "Contains: Wheat. Made in a facility that also processes Milk and Sesame.",
+    price: 1200,
     pieces_per_package: 10,
-    image_url: "/src/assets/menu-sesame-bun.jpg"
+    image_url: "/products/sweet-potato.jpg",
   },
   {
-    id: "yam-bun",
-    name: "Yam Bun", 
-    description: "Purple yam filled bun with creamy texture",
-    price: 1500,
+    id: "purple-yam",
+    name: "Organic Purple Yam Bao",
+    nameChinese: "有機紫薯饅頭",
+    description: "Beautiful purple yam bao with a creamy, earthy sweetness",
+    ingredients: "Organic unbleached all-purpose flour, organic purple yam, organic olive oil, yeast",
+    allergens: "Contains: Wheat. Made in a facility that also processes Milk and Sesame.",
+    price: 1200,
     pieces_per_package: 10,
-    image_url: "/src/assets/menu-yam-bun.jpg"
+    image_url: "/products/purple-yam.jpg",
   },
   {
-    id: "banana-bun",
-    name: "Banana Bun",
-    description: "Sweet banana custard filled bun",
-    price: 1500,
+    id: "corn-scallion-cheese",
+    name: "Organic Corn Scallion Cheese Bao",
+    nameChinese: "有機玉米香蔥起司饅頭",
+    description: "Savory bao loaded with corn, scallion, and a trio of organic cheeses",
+    ingredients: "Organic unbleached all-purpose flour, organic mozzarella cheese, organic Monterey Jack cheese, organic cheddar cheese, organic corn, organic scallion, organic olive oil, yeast",
+    allergens: "Contains: Wheat, Milk. Made in a facility that also processes Sesame.",
+    price: 1200,
     pieces_per_package: 10,
-    image_url: "/src/assets/menu-banana-bun.jpg"
+    image_url: "/products/corn-scallion-cheese.jpg",
   },
   {
-    id: "sticky-rice",
-    name: "Sticky Rice Bun",
-    description: "Traditional sticky rice filled bun",
-    price: 1800, // $18.00
+    id: "black-sesame",
+    name: "Organic Black Sesame Bao",
+    nameChinese: "有機黑芝麻饅頭",
+    description: "Rich, nutty black sesame bao with a beautiful dark color",
+    ingredients: "Organic unbleached all-purpose flour, organic black sesame powder, organic whole milk, organic olive oil, yeast",
+    allergens: "Contains: Wheat, Milk, Sesame.",
+    price: 1200,
     pieces_per_package: 10,
-    image_url: "/src/assets/menu-sticky-rice.jpg"
-  }
+    image_url: "/products/black-sesame.jpg",
+  },
+  {
+    id: "tomato-raisin",
+    name: "Organic Tomato & Raisin Bao",
+    nameChinese: "有機番茄葡萄乾饅頭",
+    description: "A unique sweet-savory bao with tomato and plump organic raisins",
+    ingredients: "Organic unbleached all-purpose flour, organic tomato, organic raisin, organic olive oil, yeast",
+    allergens: "Contains: Wheat. Made in a facility that also processes Milk and Sesame.",
+    price: 1200,
+    pieces_per_package: 10,
+    image_url: "/products/tomato-raisin.jpg",
+  },
 ];

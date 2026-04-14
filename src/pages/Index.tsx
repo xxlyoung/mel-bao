@@ -1,6 +1,8 @@
 import Navbar from "@/components/melbao/Navbar";
 import Hero from "@/components/melbao/Hero";
 import MenuHighlights from "@/components/melbao/MenuHighlights";
+import About from "@/components/melbao/About";
+import FAQ from "@/components/melbao/FAQ";
 import InstagramFeed from "@/components/melbao/InstagramFeed";
 import OrderingInfo from "@/components/melbao/OrderingInfo";
 import Contact from "@/components/melbao/Contact";
@@ -40,10 +42,10 @@ const Index = () => {
   return (
     <div>
       <Helmet>
-        <title>Mel Bao | Baby-Friendly Artisan Buns in Los Altos</title>
+        <title>Mel Bao | Organic Baby-Friendly Bao in Los Altos</title>
         <meta
           name="description"
-          content="Photo-first MEHKO bakery in Los Altos by Dennis Hou & Phoebe Chen — baby- and toddler-friendly artisan buns made fresh daily."
+          content="Mel Bao is a MEHKO bakery in Los Altos by Dennis Hou & Phoebe Chen — handmade organic bao for babies and toddlers. No added sugar, salt, or egg."
         />
         <link rel="canonical" href={canonical} />
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
@@ -52,7 +54,9 @@ const Index = () => {
       <main>
         <Hero />
         <MenuHighlights />
+        <About />
         <OrderingInfo />
+        <FAQ />
         <InstagramFeed />
         <Contact />
       </main>

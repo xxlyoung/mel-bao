@@ -3,35 +3,47 @@ import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-full w-full flex items-center">
-      <div className="absolute top-0 right-0 w-1/2 h-full">
+    <section id="home" className="relative w-full flex items-center">
+      {/* Content */}
+      <div className="container pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col items-center text-center">
         <img
-          src="/lovable-uploads/471bacc7-5249-4498-868b-58fab331450b.png"
-          alt="Mel Bao branded packaging bags"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchPriority="high"
+          src="/branding/header.png"
+          alt="Mel Bao logo"
+          className="w-40 h-auto md:w-56 mb-8"
         />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/40 to-background/90" />
-      <div className="container relative py-32 md:py-40">
-        <div className="max-w-2xl space-y-6 animate-enter">
-          <h1 className="font-display text-4xl md:text-6xl leading-tight">
-            Buns for little tummies
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-            Small batch, baby-friendly buns made fresh in our certified home
-            kitchen in Los Altos. No added sugar, salt, or egg.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a href="#menu">
-              <Button variant="hero" size="lg" className="font-display">
-                Order Now
-                <ArrowDown className="w-4 h-4 ml-2" />
-              </Button>
-            </a>
-          </div>
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-tight max-w-3xl">
+          Organic buns for little tummies
+        </h1>
+        <p className="text-lg md:text-xl text-muted-foreground max-w-xl mt-4">
+          Small-batch, handmade bao crafted with organic ingredients in our certified home kitchen in Los Altos. No added sugar, salt, or egg.
+        </p>
+        <div className="flex flex-wrap gap-4 mt-8 justify-center">
+          <a href="#menu">
+            <Button variant="playful" size="lg" className="font-display text-lg px-8">
+              See Our Menu
+              <ArrowDown className="w-5 h-5 ml-2" />
+            </Button>
+          </a>
+          <a href="#order">
+            <Button variant="outline" size="lg" className="font-display text-lg px-8 bg-background">
+              Order Now
+            </Button>
+          </a>
+        </div>
+
+        <div className="flex flex-wrap gap-3 mt-10 justify-center">
+          <span className="px-4 py-1.5 rounded-full border bg-muted text-foreground text-sm font-medium">
+            100% Organic
+          </span>
+          <span className="px-4 py-1.5 rounded-full border bg-muted text-foreground text-sm font-medium">
+            No Sugar Added
+          </span>
+          <span className="px-4 py-1.5 rounded-full border bg-muted text-foreground text-sm font-medium">
+            Handmade Fresh
+          </span>
+          <span className="px-4 py-1.5 rounded-full border bg-muted text-foreground text-sm font-medium">
+            10 Pcs per Pack
+          </span>
         </div>
       </div>
     </section>

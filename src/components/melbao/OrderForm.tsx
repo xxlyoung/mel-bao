@@ -83,6 +83,13 @@ const OrderForm = () => {
         }),
       });
 
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) {
+        throw new Error(
+          "Checkout is not available in this environment. Please run with `netlify dev` instead of `npm run dev`."
+        );
+      }
+
       const data = await response.json();
 
       if (!response.ok) {

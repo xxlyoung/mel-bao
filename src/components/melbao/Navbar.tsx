@@ -17,6 +17,18 @@ const Navbar = () => {
             Menu
           </a>
           <a
+            href="#about"
+            className="font-display font-medium hover:text-primary transition-colors"
+          >
+            About
+          </a>
+          <a
+            href="#faq"
+            className="font-display font-medium hover:text-primary transition-colors"
+          >
+            FAQ
+          </a>
+          <a
             href="#contact"
             className="font-display font-medium hover:text-primary transition-colors"
           >
