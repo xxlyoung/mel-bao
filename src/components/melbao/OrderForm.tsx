@@ -100,6 +100,16 @@ const OrderForm = () => {
         throw new Error(data.error || "Failed to create checkout session");
       }
 
+      // Save order summary for confirmation page
+      localStorage.setItem("melbao-order-summary", JSON.stringify({
+        items: items.map((item) => {
+          const product = products.find((p) => p.id === item.productId);
+          return { name: product?.name || item.productId, quantity: item.quantity };
+        }),
+        pickupDate,
+        pickupTime,
+      }));
+
       // Redirect to Stripe Checkout
       window.location.href = data.url;
     } catch (error) {

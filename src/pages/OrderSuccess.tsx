@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, MapPin } from "lucide-react";
+import { CheckCircle, MapPin, CalendarDays, ShoppingBag } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useCart } from "@/contexts/CartContext";
 
@@ -9,10 +9,20 @@ const OrderSuccess = () => {
   const { clearCart } = useCart();
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get("session_id");
+  const [orderSummary, setOrderSummary] = useState<{
+    items: { name: string; quantity: number }[];
+    pickupDate: string;
+    pickupTime: string;
+  } | null>(null);
 
   useEffect(() => {
     if (sessionId) {
       clearCart();
+      const saved = localStorage.getItem("melbao-order-summary");
+      if (saved) {
+        setOrderSummary(JSON.parse(saved));
+        localStorage.removeItem("melbao-order-summary");
+      }
     }
   }, [sessionId, clearCart]);
 
@@ -36,6 +46,37 @@ const OrderSuccess = () => {
             Thank you for your order! You'll receive a confirmation email from
             Stripe with your receipt.
           </p>
+          {orderSummary && (
+            <div className="bg-muted/50 rounded-lg p-4 mb-4 text-left">
+              <div className="flex items-center gap-2 mb-3">
+                <ShoppingBag className="h-5 w-5 text-primary" />
+                <h2 className="font-semibold text-lg">Order Summary</h2>
+              </div>
+              <ul className="text-sm space-y-1 mb-3">
+                {orderSummary.items.map((item, i) => (
+                  <li key={i} className="flex justify-between">
+                    <span>{item.name}</span>
+                    <span className="text-muted-foreground">× {item.quantity}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex items-center gap-2 text-sm border-t pt-3">
+                <CalendarDays className="h-4 w-4 text-muted-foreground" />
+                <span>
+                  Pickup:{" "}
+                  <strong>
+                    {new Date(orderSummary.pickupDate + "T12:00:00").toLocaleDateString("en-US", {
+                      weekday: "long",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </strong>{" "}
+                  at <strong>{orderSummary.pickupTime}</strong>
+                </span>
+              </div>
+            </div>
+          )}
+
           <div className="bg-muted/50 rounded-lg p-4 mb-6 text-left">
             <div className="flex items-center gap-2 mb-3">
               <MapPin className="h-5 w-5 text-primary" />
@@ -64,6 +105,17 @@ const OrderSuccess = () => {
               />
             </div>
           </div>
+          <p className="text-sm text-muted-foreground mb-6">
+            For any other inquiries, DM us on Instagram:{" "}
+            <a
+              href="https://www.instagram.com/mel__bao/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-primary font-medium"
+            >
+              @mel__bao
+            </a>
+          </p>
           <Link to="/">
             <Button size="lg">Return to Home</Button>
           </Link>
