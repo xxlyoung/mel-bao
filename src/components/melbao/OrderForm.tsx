@@ -326,7 +326,7 @@ const OrderForm = () => {
             onClick={handleCheckout}
             disabled={isProcessing}
             className="w-full"
-            variant="hero"
+            variant="playful"
             size="lg"
           >
             {isProcessing
