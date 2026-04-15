@@ -29,6 +29,7 @@ const OrderForm = () => {
   const [customerEmail, setCustomerEmail] = useState("");
   const [customerPhone, setCustomerPhone] = useState("");
   const [pickupDate, setPickupDate] = useState("");
+  const [pickupTime, setPickupTime] = useState("");
   const [specialInstructions, setSpecialInstructions] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const { toast } = useToast();
@@ -49,7 +50,7 @@ const OrderForm = () => {
   };
 
   const handleCheckout = async () => {
-    if (!customerName || !customerEmail || !customerPhone || !pickupDate) {
+    if (!customerName || !customerEmail || !customerPhone || !pickupDate || !pickupTime) {
       toast({
         title: "Missing Information",
         description: "Please fill in all required fields.",
@@ -81,7 +82,7 @@ const OrderForm = () => {
           customerName,
           customerEmail,
           customerPhone,
-          pickupDate,
+          pickupDate: `${pickupDate} at ${pickupTime}`,
           specialInstructions,
         }),
       });
@@ -258,7 +259,7 @@ const OrderForm = () => {
             <div className="space-y-4">
               <div>
                 <Label htmlFor="pickupDate">Pickup Date *</Label>
-                <Select value={pickupDate} onValueChange={setPickupDate}>
+                <Select value={pickupDate} onValueChange={(val) => { setPickupDate(val); setPickupTime(""); }}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select pickup date" />
                   </SelectTrigger>
@@ -278,17 +279,24 @@ const OrderForm = () => {
                   </SelectContent>
                 </Select>
               </div>
-              <div>
-                <Label>Pickup Time</Label>
-                <div className="p-3 border rounded-md bg-muted/50">
-                  <p className="text-sm">
-                    Available daily: <strong>5:00 PM - 7:00 PM</strong>
-                  </p>
+              {pickupDate && (
+                <div>
+                  <Label htmlFor="pickupTime">Pickup Time *</Label>
+                  <Select value={pickupTime} onValueChange={setPickupTime}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select pickup time" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="5:00 PM">5:00 PM</SelectItem>
+                      <SelectItem value="6:00 PM">6:00 PM</SelectItem>
+                      <SelectItem value="7:00 PM">7:00 PM</SelectItem>
+                    </SelectContent>
+                  </Select>
                   <p className="text-xs text-muted-foreground mt-1">
                     Los Altos, CA — exact address provided after payment
                   </p>
                 </div>
-              </div>
+              )}
               <div>
                 <Label htmlFor="specialInstructions">
                   Special Instructions (Optional)
