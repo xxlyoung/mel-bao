@@ -18,8 +18,19 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // TODO: Add backend integration (e.g., Vercel serverless function with email service)
-      console.log("Contact form submitted:", { name, email, message });
+      const formData = new URLSearchParams();
+      formData.append("form-name", "contact");
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("message", message);
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString(),
+      });
+
+      if (!response.ok) throw new Error("Form submission failed");
 
       toast({
         title: "Thanks!",
